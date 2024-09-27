@@ -41,8 +41,24 @@ select airport.name as "airport name" from airport where iso_country="FR" and ty
 select country.name as "country_name", airport.name as "airport_name" from country, airport where country.iso_country = airport.iso_country and country.continent ="AN";
 <img width="960" alt="W3_Ex3_Q2Q3" src="https://github.com/user-attachments/assets/65afa06d-9cce-483f-9dfb-96310593bc48">
 select elevation_ft from airport, game where location = ident and screen_name = "Heini";
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/dad3776c-cf85-46cf-bc6d-19140a4b050b">
 
 select elevation_ft * 0.3048 as elevation_m from airport, game where location = ident and screen_name = "Heini";
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/01699dbe-3486-4d1b-8870-810de0ee7030">
+
+select name from airport, game where location = ident and screen_name = "Ilkka";
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/cf1507d5-cbb5-4dd6-ae02-245e829c3ff9">
+
+select country.name from airport, country, game where location=ident and airport.iso_country=country.iso_country and screen_name="Ilkka";
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/aaf0c7da-8ac4-4276-9306-fb5579d5cdc0">
+
+select name from goal, goal_reached, game where game.id = game_id and goal.id = goal_id and screen_name = "Heini";
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/16c2f156-edf3-4721-a205-3e64fed10a8c">
+select airport.name from airport, game, goal, goal_reached where ident = location and game.id = game_id and goal.id = goal_id  and screen_name = "Ilkka" and goal.name = "CLOUDS";
+<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/d91f9537-0bfb-4945-8980-eab634cc1247">
+
+select country.name from country, airport, game, goal, goal_reached where airport.iso_country=country.iso_country and ident=location and game.id=game_id and goal.id=goal_id and screen_name= "Ilkka" and goal.name ="CLOUDS";
+<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/7edbf996-e3af-4416-9d26-13b7575c1723">
 
 
 
