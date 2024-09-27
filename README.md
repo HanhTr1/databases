@@ -17,7 +17,7 @@ select name from country where name like "F%";
 <img width="960" alt="W3_Ex2_Q5Q6" src="https://github.com/user-attachments/assets/d703b750-d906-47e6-9552-d61a710e4cad">
 
 select name from country where name like "%F%";
-<img width="960" alt="W3_Ex2_Q7" src="https://github.com/user-attachments/assets/5c5e6d27-3db7-4228-9293-c314a07b8402">
+<img width="960" alt="W3_Ex2_Q7" src="https://github.com/user-attachments/assets/365e9cbf-3454-4709-bb84-1c2742858919">
 
 select location from game where screen_name ="Vesa";
 <img width="960" alt="W3_Ex2_Q8910" src="https://github.com/user-attachments/assets/49910b83-3f45-4414-8f30-fe4208d3dde1">
@@ -33,35 +33,36 @@ select screen_name, co2_budget, co2_consumed, (@co2_left := co2_budget - co2_con
 
 ### Exercise 3
 select country.name as "country name", airport.name as "airport name" from airport, country where airport.iso_country = country.iso_country and country.name = "Iceland";
-<img width="960" alt="W3_Ex3_Q1" src="https://github.com/user-attachments/assets/2d1f608c-c438-460c-8fe6-7406929f382e">
+<img width="960" alt="W3_Ex3_Q1" src="https://github.com/user-attachments/assets/35c5a848-477d-476d-af24-5e0eb661bd4b">
 
 select airport.name as "airport name" from airport where iso_country="FR" and type ="large_airport";
-<img width="960" alt="W3_Ex3_Q2Q3" src="https://github.com/user-attachments/assets/d1fc6230-1422-4df1-bd88-7bd8a148ae8d">
+<img width="960" alt="W3_Ex3_Q2Q3" src="https://github.com/user-attachments/assets/62c6caed-11b6-4c32-81e4-0dd6ab59931c">
 
 select country.name as "country_name", airport.name as "airport_name" from country, airport where country.iso_country = airport.iso_country and country.continent ="AN";
-<img width="960" alt="W3_Ex3_Q2Q3" src="https://github.com/user-attachments/assets/65afa06d-9cce-483f-9dfb-96310593bc48">
+<img width="960" alt="W3_Ex3_Q2Q3" src="https://github.com/user-attachments/assets/f324bb4b-1271-49b7-877e-527d6f2d0180">
+
 select elevation_ft from airport, game where location = ident and screen_name = "Heini";
-<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/dad3776c-cf85-46cf-bc6d-19140a4b050b">
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/bf08241d-07fb-4e6d-b791-bcd16d0ef6be">
 
 select elevation_ft * 0.3048 as elevation_m from airport, game where location = ident and screen_name = "Heini";
-<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/01699dbe-3486-4d1b-8870-810de0ee7030">
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/f43a2bb4-ddfa-46d3-97e3-6b245fbb19e2">
 
 select name from airport, game where location = ident and screen_name = "Ilkka";
-<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/cf1507d5-cbb5-4dd6-ae02-245e829c3ff9">
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/1fa4e16f-bec4-4680-8978-678ac3b58e93">
 
 select country.name from airport, country, game where location=ident and airport.iso_country=country.iso_country and screen_name="Ilkka";
-<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/aaf0c7da-8ac4-4276-9306-fb5579d5cdc0">
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/f812e5b8-6c7b-4306-8abd-e68e146f8943">
 
 select name from goal, goal_reached, game where game.id = game_id and goal.id = goal_id and screen_name = "Heini";
-<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/16c2f156-edf3-4721-a205-3e64fed10a8c">
+<img width="960" alt="W3_Ex3_Q45678" src="https://github.com/user-attachments/assets/dd0e73b7-2c5e-4c94-a707-63d7af9ff930">
+
 select airport.name from airport, game, goal, goal_reached where ident = location and game.id = game_id and goal.id = goal_id  and screen_name = "Ilkka" and goal.name = "CLOUDS";
-<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/d91f9537-0bfb-4945-8980-eab634cc1247">
+<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/fa282316-3b99-4cc7-95e2-502e05e2267f">
 
 select country.name from country, airport, game, goal, goal_reached where airport.iso_country=country.iso_country and ident=location and game.id=game_id and goal.id=goal_id and screen_name= "Ilkka" and goal.name ="CLOUDS";
-<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/7edbf996-e3af-4416-9d26-13b7575c1723">
-
-
-
+<img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/9d2f5a81-6c71-49bb-8e80-06140d4d5ef0">
+## Week 4
+### Exercise 4
 
 
 
