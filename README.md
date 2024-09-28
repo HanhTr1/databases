@@ -1,4 +1,4 @@
-# Week 1 Exercise 1 on Moodle
+<img width="960" alt="W5_Ex6_Q67" src="https://github.com/user-attachments/assets/8fc83d20-ae50-4a3b-9eba-5f7e06c050eb"># Week 1 Exercise 1 on Moodle
 # Week 2:
 ### Exercise 2
 select * from goal;
@@ -95,7 +95,40 @@ select country.name from country where iso_country not in (select airport.iso_co
 select name from goal where id not in(select goal.id from goal, goal_reached, game where game.id = game_id and goal.id = goal_id and screen_name = "Heini");
 <img width="960" alt="W4_Ex5_Q5" src="https://github.com/user-attachments/assets/7324ba76-75bd-4988-a03e-81aa2734538e">
 
+## Week 5
 ### Exercise 6
+
+select max(elevation_ft) from airport;
+<img width="960" alt="W5_Ex6_Q123" src="https://github.com/user-attachments/assets/de8b97b7-80d5-4e97-943c-f56144e30c04">
+
+select continent, count(*) from country group by continent;
+<img width="960" alt="W5_Ex6_Q123" src="https://github.com/user-attachments/assets/f96b48c8-39c9-4da7-b619-4bc334a66a07">
+
+select screen_name, count(*) from game, goal_reached where id = game_id group by screen_name;
+<img width="960" alt="W5_Ex6_Q123" src="https://github.com/user-attachments/assets/4badb4bb-dd25-4732-8479-99123f453f2b">
+
+select screen_name from game where co2_consumed in(select min(co2_consumed) from game);
+<img width="960" alt="W5_Ex6_Q4" src="https://github.com/user-attachments/assets/d58f545d-094d-4610-99c7-a252bdaa6873">
+
+select country.name, count(*) from airport, country where airport.iso_country = country.iso_country group by country.iso_country order by count(*) desc limit 50;
+<img width="960" alt="W5_Ex6_Q5" src="https://github.com/user-attachments/assets/54e8ae25-0fd5-4e2c-b919-a28a0576c555">
+
+select country.name from airport, country where airport.iso_country = country.iso_country group by country.iso_country having count(*) > 1000;
+<img width="960" alt="W5_Ex6_Q67" src="https://github.com/user-attachments/assets/16bb400b-d93e-4681-8bd0-a036735250b3">
+
+select name from airport where elevation_ft in (select max(elevation_ft) from airport );
+<img width="960" alt="W5_Ex6_Q67" src="https://github.com/user-attachments/assets/bdffdaa8-33a7-4b7f-a62f-9f2dff4bb2c3">
+
+select name from country where iso_country in (select iso_country from airport where elevation_ft in(select max(elevation_ft) from airport));
+<img width="960" alt="W5_Ex6_Q8910" src="https://github.com/user-attachments/assets/dfb0d75e-db02-4d51-a2da-ea834de40655">
+
+select count(*) from game, goal_reached where id = game_id and screen_name = "Vesa" group by screen_name;
+<img width="960" alt="W5_Ex6_Q8910" src="https://github.com/user-attachments/assets/5db633d2-2948-4f3a-a6e6-5bbd96c25a93">
+
+select name from airport where latitude_deg in(select min(latitude_deg) from airport);
+<img width="960" alt="W5_Ex6_Q8910" src="https://github.com/user-attachments/assets/f9678e85-42cd-435b-b0eb-2be05d9b9854">
+
+
 
 
 
