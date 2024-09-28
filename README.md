@@ -63,6 +63,43 @@ select country.name from country, airport, game, goal, goal_reached where airpor
 <img width="960" alt="W3_Ex3_Q9Q10" src="https://github.com/user-attachments/assets/9d2f5a81-6c71-49bb-8e80-06140d4d5ef0">
 ## Week 4
 ### Exercise 4
+select country.name as "country name", airport.name as "airport name" from country inner join airport on airport.iso_country = country.iso_country where country.name = "Finland" and scheduled_service = "yes";
+<img width="960" alt="W4_Ex4_Q1" src="https://github.com/user-attachments/assets/ff5011e9-501f-4d27-b820-6ea7d7ebd8bd">
+
+select screen_name, airport.name from game inner join airport on location = ident;
+<img width="960" alt="W4_Ex4_Q234" src="https://github.com/user-attachments/assets/7249ddcf-5ee3-4ffa-ba32-3bc41c3b66a9">
+
+select screen_name, country.name from game inner join airport on location = ident inner join country on airport.iso_country = country.iso_country;
+<img width="960" alt="W4_Ex4_Q234" src="https://github.com/user-attachments/assets/0f4e7802-2cc5-423e-b5fa-ed007b9268af">
+
+select airport.name, screen_name from airport left join game on ident = location where name like "%Hels%";
+<img width="960" alt="W4_Ex4_Q234" src="https://github.com/user-attachments/assets/0d1cbf32-f903-499e-bbb6-63f341469134">
+
+select name, screen_name from goal left join goal_reached on goal.id = goal_id  left join game on game.id = game_id;
+<img width="960" alt="W4_Ex4_Q5" src="https://github.com/user-attachments/assets/b8d303da-31cd-499a-bda6-2d0152854d3e">
+
+### Exercise 5
+
+select name from country where iso_country in(select iso_country from airport where name like "Satsuma%");
+<img width="960" alt="W4_Ex5_Q1234" src="https://github.com/user-attachments/assets/66f656ac-d562-4331-bcdf-34291e7a6aba">
+
+select name from airport where iso_country in(select iso_country from country where country.name = "Monaco");
+<img width="960" alt="W4_Ex5_Q1234" src="https://github.com/user-attachments/assets/8e0b2033-9c3f-44a3-a753-11c9d5dfe0fb">
+
+select screen_name from game where game.id in(select game_id from goal_reached where goal_id in (select id from goal where name ="CLOUDS"));
+<img width="960" alt="W4_Ex5_Q1234" src="https://github.com/user-attachments/assets/cfa0a0a6-ece4-479e-b208-a9c32ade011d">
+
+select country.name from country where iso_country not in (select airport.iso_country from airport);
+<img width="960" alt="W4_Ex5_Q1234" src="https://github.com/user-attachments/assets/b2787ac7-579e-4359-9f65-fbeb0376fc17">
+
+select name from goal where id not in(select goal.id from goal, goal_reached, game where game.id = game_id and goal.id = goal_id and screen_name = "Heini");
+<img width="960" alt="W4_Ex5_Q5" src="https://github.com/user-attachments/assets/7324ba76-75bd-4988-a03e-81aa2734538e">
+
+### Exercise 6
+
+
+
+
 
 
 
