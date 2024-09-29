@@ -128,6 +128,36 @@ select count(*) from game, goal_reached where id = game_id and screen_name = "Ve
 select name from airport where latitude_deg in(select min(latitude_deg) from airport);
 <img width="960" alt="W5_Ex6_Q8910" src="https://github.com/user-attachments/assets/f9678e85-42cd-435b-b0eb-2be05d9b9854">
 
+### Exercise 7
+update game set  location = (select ident from airport where name = "Nottingham Airport"), co2_consumed = co2_consumed+500 where screen_name = "Vesa";
+select * from game;
+<img width="960" alt="W5_Ex7_Q1" src="https://github.com/user-attachments/assets/794a3cc6-51d1-473a-879f-9aa673e970ff">
+
+Question 2: goal_reached
+
+delete from goal_reached;
+select * from goal_reached;
+
+<img width="960" alt="W5_Ex7_Q3Q4" src="https://github.com/user-attachments/assets/1e530059-b31d-4b88-b389-ad98852ef7ed">
+
+delete from game;
+select * from game;
+<img width="960" alt="W5_Ex7_Q3Q4" src="https://github.com/user-attachments/assets/d8b0a889-fa5e-446b-b48c-79d75d6a031c">
+
+## Week 1 software 2
+### Exercise 8
+1. ident
+2. s
+3. Each country can have multiple airports.
+4. true
+5. false
+6. The airport table will have a foreign key that references the country table.
+7. The game table will have a foreign key that references the airport table.
+8. true
+9. The relationship diamond will have its own table.
+10. Two foreign keys: One referencing the game table and another referencing the goal table.
+
+
 
 
 
