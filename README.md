@@ -1,5 +1,31 @@
-<img width="960" alt="W5_Ex6_Q67" src="https://github.com/user-attachments/assets/8fc83d20-ae50-4a3b-9eba-5f7e06c050eb"># Week 1 Exercise 1 on Moodle
-# Week 2:
+## Week 1:
+1. 5
+2. 5
+3. ident
+4. varchar
+5. iso_country
+6. country
+7. iso_country
+8. varchar
+9. 70942
+10. iso_country
+11. varchar
+12. 248
+13. goal
+14. 0DEG
+15. id
+16. false
+17. game
+18. game
+19. game
+20. game
+21. id
+22. location
+23. goal_reached
+24. goal_id and game_id
+25. 2
+    
+## Week 3:
 ### Exercise 2
 select * from goal;
 <img width="960" alt="W3_Ex2_Q1Q2" src="https://github.com/user-attachments/assets/789140c4-f467-42cd-8530-54898427660f">
@@ -147,7 +173,7 @@ select * from game;
 ## Week 1 software 2
 ### Exercise 8
 1. ident
-2. s
+2. airport
 3. Each country can have multiple airports.
 4. true
 5. false
